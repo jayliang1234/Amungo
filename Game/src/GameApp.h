@@ -1,4 +1,5 @@
 #pragma once
+#include "pch.h"
 #include "GameUtil.h"
 namespace Game
 {
@@ -8,8 +9,6 @@ namespace Game
 		virtual void OnUpdate() = 0;
 
 		void Run();
-
-
 
 	private:
 

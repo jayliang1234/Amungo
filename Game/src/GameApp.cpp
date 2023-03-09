@@ -1,6 +1,7 @@
+#include "pch.h"
 #include "GameApp.h"
-#include <iostream>
-namespace Game 
+
+namespace Game
 {
 	void GameApp::Run()
 	{
@@ -8,7 +9,11 @@ namespace Game
 		{
 			std::cout << "Game running \n";
 
+
+
+
+
+			OnUpdate();
 		}
 	}
 }
-

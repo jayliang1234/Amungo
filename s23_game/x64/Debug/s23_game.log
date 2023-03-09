@@ -1,2 +1,4 @@
 ﻿  main.cpp
-  s23_game.vcxproj -> C:\Users\jayli\Desktop\repos\s23_game\x64\Debug\s23_game.exe
+main.obj : error LNK2019: unresolved external symbol "public: static void __cdecl Game::GameWindow::Init(void)" (?Init@GameWindow@Game@@SAXXZ) referenced in function "public: __cdecl S23_Game_App::S23_Game_App(void)" (??0S23_Game_App@@QEAA@XZ)
+main.obj : error LNK2019: unresolved external symbol "public: static void __cdecl Game::GameWindow::CreateWindow(int,int,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > &&)" (?CreateWindow@GameWindow@Game@@SAXHH$$QEAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z) referenced in function "public: __cdecl S23_Game_App::S23_Game_App(void)" (??0S23_Game_App@@QEAA@XZ)
+C:\Users\jayli\Desktop\repos\mygame\x64\Debug\s23_game.exe : fatal error LNK1120: 2 unresolved externals

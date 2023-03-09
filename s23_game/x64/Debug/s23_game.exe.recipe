@@ -2,10 +2,10 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>C:\Users\jayli\Desktop\repos\s23_game\x64\Debug\Game.dll</FullPath>
+      <FullPath>C:\Users\jayli\Desktop\repos\mygame\x64\Debug\Game.dll</FullPath>
     </ProjectOutput>
     <ProjectOutput>
-      <FullPath>C:\Users\jayli\Desktop\repos\s23_game\x64\Debug\s23_game.exe</FullPath>
+      <FullPath>C:\Users\jayli\Desktop\repos\mygame\x64\Debug\s23_game.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />
