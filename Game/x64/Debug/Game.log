@@ -1,9 +1,2 @@
 ﻿  GameApp.cpp
-C:\Users\jayli\Desktop\repos\mygame\Game\src\GameApp.cpp(1,10): fatal  error C1083: Cannot open precompiled header file: 'x64\Debug\Game.pch': No such file or directory
-  GameWindow.cpp
-C:\Users\jayli\Desktop\repos\mygame\Game\src\GameWindow.cpp(1,10): fatal  error C1083: Cannot open precompiled header file: 'x64\Debug\Game.pch': No such file or directory
-  GLFWimplementation.cpp
-C:\Users\jayli\Desktop\repos\mygame\Game\src\GLFWCode\GLFWimplementation.cpp(40,1): fatal  error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "pch.h"' to your source?
-  pch.cpp
-C:\Users\jayli\Desktop\repos\mygame\Game\src\pch.cpp(1,10): fatal  error C1083: Cannot open precompiled header file: 'x64\Debug\Game.pch': No such file or directory
-  Generating Code...
+  Game.vcxproj -> C:\Users\jayli\Desktop\repos\mygame\x64\Debug\Game.dll

@@ -1,6 +1,6 @@
 #include "pch.h"
 #include "GameWindow.h"
-
+#include "GLFWCode/GLFWimplementation.h"
 namespace Game
 {
 
@@ -25,6 +25,16 @@ namespace Game
 		mInstance->mImplementation->CreateWindow(width, height, windowName);
 	}
 
+	void GameWindow::SwapBuffers()
+	{
+		mInstance->mImplementation->SwapBuffers();
+	}
+
+	void GameWindow::PollEvents()
+	{
+		mInstance->mImplementation->PollEvents();
+	}
+
 	int GameWindow::GetWidth()
 	{
 		return mInstance->mImplementation->GetWidth();
@@ -33,6 +43,21 @@ namespace Game
 	int GameWindow::GetHeight()
 	{
 		return mInstance->mImplementation->GetHeight();
+	}
+
+	GameWindow::~GameWindow()
+	{
+		if (mImplementation != nullptr)
+			delete mImplementation;
+	}
+
+	GameWindow::GameWindow()
+	{
+#ifdef GAME_GLFW
+		mImplementation = new GLFWimplementation;
+#else
+		#ERROR_only_GLFW_is_supported
+#endif
 	}
 
 }

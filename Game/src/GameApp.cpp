@@ -7,12 +7,6 @@ namespace Game
 	{
 		while (true)
 		{
-			std::cout << "Game running \n";
-
-
-
-
-
 			OnUpdate();
 		}
 	}
