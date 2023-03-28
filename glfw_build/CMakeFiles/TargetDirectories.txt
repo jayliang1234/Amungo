@@ -1,4 +1,0 @@
-C:/Users/jayli/Desktop/repos/mygame/glfw_build/CMakeFiles/ALL_BUILD.dir
-C:/Users/jayli/Desktop/repos/mygame/glfw_build/CMakeFiles/ZERO_CHECK.dir
-C:/Users/jayli/Desktop/repos/mygame/glfw_build/src/CMakeFiles/glfw.dir
-C:/Users/jayli/Desktop/repos/mygame/glfw_build/src/CMakeFiles/update_mappings.dir
