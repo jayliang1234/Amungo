@@ -2,10 +2,10 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>C:\Users\jayli\Desktop\repos\mygame\x64\Debug\glfw3.dll</FullPath>
+      <FullPath>C:\Users\jayli\Desktop\repos\jay_liang_S23\x64\Debug\glfw3.dll</FullPath>
     </ProjectOutput>
     <ProjectOutput>
-      <FullPath>C:\Users\jayli\Desktop\repos\mygame\x64\Debug\Game.dll</FullPath>
+      <FullPath>C:\Users\jayli\Desktop\repos\jay_liang_S23\x64\Debug\Game.dll</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />
