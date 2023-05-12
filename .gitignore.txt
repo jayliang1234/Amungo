@@ -9,3 +9,5 @@ s23_game/Debug
 s23_game/Release
 s23_game/x64
 glfw_build/
+glad/x64
+stbi/x64

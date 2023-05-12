@@ -1,1 +1,117 @@
-﻿  Game.vcxproj -> C:\Users\jayli\Desktop\repos\jay_liang_S23\x64\Debug\Game.dll
+﻿  GameApp.cpp
+C:\Users\jayli\Desktop\repos\jay_liang_S23\Game\src\Image.h(19,19): error C2065: 'ImplImage': undeclared identifier
+C:\Users\jayli\Desktop\repos\jay_liang_S23\Game\src\Image.h(19,8): error C2923: 'std::unique_ptr': 'ImplImage' is not a valid template type argument for parameter '_Ty'
+C:\Users\jayli\Desktop\repos\jay_liang_S23\Game\src\Image.h(19,19): message : see declaration of 'ImplImage'
+C:\Users\jayli\Desktop\repos\jay_liang_S23\Game\src\Image.h(19,8): error C2976: 'std::unique_ptr': too few template arguments
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\memory(3139,1): message : see declaration of 'std::unique_ptr'
+C:\Users\jayli\Desktop\repos\jay_liang_S23\Game\src\Image.h(19,30): error C3000: 'std::unique_ptr': use of class template requires template argument list. Argument deduction is not allowed in non-static data member
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\memory(3139,1): message : see declaration of 'std::unique_ptr'
+C:\Users\jayli\Desktop\repos\jay_liang_S23\Game\src\Image.h(19,30): warning C4251: 'Game::Image::mImplementation': class 'std::unique_ptr' needs to have dll-interface to be used by clients of class 'Game::Image'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\memory(3139,1): message : see declaration of 'std::unique_ptr'
+C:\Users\jayli\Desktop\repos\jay_liang_S23\Game\src\Shader.h(18,31): warning C4251: 'Game::Shader::mImplementation': class 'std::unique_ptr<Game::ImplShader,std::default_delete<Game::ImplShader>>' needs to have dll-interface to be used by clients of class 'Game::Shader'
+C:\Users\jayli\Desktop\repos\jay_liang_S23\Game\src\Shader.h(18,8): message : see declaration of 'std::unique_ptr<Game::ImplShader,std::default_delete<Game::ImplShader>>'
+C:\Users\jayli\Desktop\repos\jay_liang_S23\Game\src\ImplRenderer.h(10,4): error C2653: 'Renderer': is not a class or namespace name
+C:\Users\jayli\Desktop\repos\jay_liang_S23\Game\src\ImplRenderer.h(10,14): error C2061: syntax error: identifier 'TextureBox'
+C:\Users\jayli\Desktop\repos\jay_liang_S23\Game\src\Renderer.h(40,33): warning C4251: 'Game::Renderer::mImplementation': class 'std::unique_ptr<Game::ImplRenderer,std::default_delete<Game::ImplRenderer>>' needs to have dll-interface to be used by clients of class 'Game::Renderer'
+C:\Users\jayli\Desktop\repos\jay_liang_S23\Game\src\Renderer.h(40,8): message : see declaration of 'std::unique_ptr<Game::ImplRenderer,std::default_delete<Game::ImplRenderer>>'
+C:\Users\jayli\Desktop\repos\jay_liang_S23\Game\src\GameWindow.h(27,45): warning C4251: 'Game::GameWindow::mInstance': class 'std::unique_ptr<Game::GameWindow,std::default_delete<Game::GameWindow>>' needs to have dll-interface to be used by clients of class 'Game::GameWindow'
+C:\Users\jayli\Desktop\repos\jay_liang_S23\Game\src\GameWindow.h(13,15): message : see declaration of 'std::unique_ptr<Game::GameWindow,std::default_delete<Game::GameWindow>>'
+C:\Users\jayli\Desktop\repos\jay_liang_S23\Game\src\GameApp.cpp(47,89): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\jayli\Desktop\repos\jay_liang_S23\Game\src\GameApp.cpp(47,64): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  GameWindow.cpp
+C:\Users\jayli\Desktop\repos\jay_liang_S23\Game\src\GameWindow.h(27,45): warning C4251: 'Game::GameWindow::mInstance': class 'std::unique_ptr<Game::GameWindow,std::default_delete<Game::GameWindow>>' needs to have dll-interface to be used by clients of class 'Game::GameWindow'
+C:\Users\jayli\Desktop\repos\jay_liang_S23\Game\src\GameWindow.h(13,15): message : see declaration of 'std::unique_ptr<Game::GameWindow,std::default_delete<Game::GameWindow>>'
+  GLFWimplementation.cpp
+  OpenGLRenderer.cpp
+C:\Users\jayli\Desktop\repos\jay_liang_S23\Game\src\Image.h(19,19): error C2065: 'ImplImage': undeclared identifier
+C:\Users\jayli\Desktop\repos\jay_liang_S23\Game\src\Image.h(19,8): error C2923: 'std::unique_ptr': 'ImplImage' is not a valid template type argument for parameter '_Ty'
+C:\Users\jayli\Desktop\repos\jay_liang_S23\Game\src\Image.h(19,19): message : see declaration of 'ImplImage'
+C:\Users\jayli\Desktop\repos\jay_liang_S23\Game\src\Image.h(19,8): error C2976: 'std::unique_ptr': too few template arguments
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\memory(3139,1): message : see declaration of 'std::unique_ptr'
+C:\Users\jayli\Desktop\repos\jay_liang_S23\Game\src\Image.h(19,30): error C3000: 'std::unique_ptr': use of class template requires template argument list. Argument deduction is not allowed in non-static data member
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\memory(3139,1): message : see declaration of 'std::unique_ptr'
+C:\Users\jayli\Desktop\repos\jay_liang_S23\Game\src\Image.h(19,30): warning C4251: 'Game::Image::mImplementation': class 'std::unique_ptr' needs to have dll-interface to be used by clients of class 'Game::Image'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\memory(3139,1): message : see declaration of 'std::unique_ptr'
+C:\Users\jayli\Desktop\repos\jay_liang_S23\Game\src\Shader.h(18,31): warning C4251: 'Game::Shader::mImplementation': class 'std::unique_ptr<Game::ImplShader,std::default_delete<Game::ImplShader>>' needs to have dll-interface to be used by clients of class 'Game::Shader'
+C:\Users\jayli\Desktop\repos\jay_liang_S23\Game\src\Shader.h(18,8): message : see declaration of 'std::unique_ptr<Game::ImplShader,std::default_delete<Game::ImplShader>>'
+C:\Users\jayli\Desktop\repos\jay_liang_S23\Game\src\Renderer.h(40,19): error C2065: 'ImplRenderer': undeclared identifier
+C:\Users\jayli\Desktop\repos\jay_liang_S23\Game\src\Renderer.h(40,8): error C2923: 'std::unique_ptr': 'ImplRenderer' is not a valid template type argument for parameter '_Ty'
+C:\Users\jayli\Desktop\repos\jay_liang_S23\Game\src\Renderer.h(40,19): message : see declaration of 'ImplRenderer'
+C:\Users\jayli\Desktop\repos\jay_liang_S23\Game\src\Renderer.h(40,8): error C2976: 'std::unique_ptr': too few template arguments
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\memory(3139,1): message : see declaration of 'std::unique_ptr'
+C:\Users\jayli\Desktop\repos\jay_liang_S23\Game\src\Renderer.h(40,33): error C3000: 'std::unique_ptr': use of class template requires template argument list. Argument deduction is not allowed in non-static data member
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\memory(3139,1): message : see declaration of 'std::unique_ptr'
+C:\Users\jayli\Desktop\repos\jay_liang_S23\Game\src\Renderer.h(40,33): warning C4251: 'Game::Renderer::mImplementation': class 'std::unique_ptr' needs to have dll-interface to be used by clients of class 'Game::Renderer'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\memory(3139,1): message : see declaration of 'std::unique_ptr'
+C:\Users\jayli\Desktop\repos\jay_liang_S23\Game\src\OpenGLCode\OpenGLRenderer.cpp(9,1): error C2882: 'std': illegal use of namespace identifier in expression
+C:\Users\jayli\Desktop\repos\jay_liang_S23\Game\src\OpenGLCode\OpenGLRenderer.cpp(9,3): error C2143: syntax error: missing ';' before ':'
+C:\Users\jayli\Desktop\repos\jay_liang_S23\Game\src\OpenGLCode\OpenGLRenderer.cpp(9,3): error C2059: syntax error: ':'
+C:\Users\jayli\Desktop\repos\jay_liang_S23\Game\src\OpenGLCode\OpenGLRenderer.cpp(40,10): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+C:\Users\jayli\Desktop\repos\jay_liang_S23\Game\src\OpenGLCode\OpenGLRenderer.cpp(40,10): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\jayli\Desktop\repos\jay_liang_S23\Game\src\OpenGLCode\OpenGLRenderer.cpp(40,25): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+C:\Users\jayli\Desktop\repos\jay_liang_S23\Game\src\OpenGLCode\OpenGLRenderer.cpp(40,25): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\jayli\Desktop\repos\jay_liang_S23\Game\src\OpenGLCode\OpenGLRenderer.cpp(41,10): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+C:\Users\jayli\Desktop\repos\jay_liang_S23\Game\src\OpenGLCode\OpenGLRenderer.cpp(41,10): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\jayli\Desktop\repos\jay_liang_S23\Game\src\OpenGLCode\OpenGLRenderer.cpp(41,33): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+C:\Users\jayli\Desktop\repos\jay_liang_S23\Game\src\OpenGLCode\OpenGLRenderer.cpp(41,33): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\jayli\Desktop\repos\jay_liang_S23\Game\src\OpenGLCode\OpenGLRenderer.cpp(42,18): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+C:\Users\jayli\Desktop\repos\jay_liang_S23\Game\src\OpenGLCode\OpenGLRenderer.cpp(42,18): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\jayli\Desktop\repos\jay_liang_S23\Game\src\OpenGLCode\OpenGLRenderer.cpp(42,52): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+C:\Users\jayli\Desktop\repos\jay_liang_S23\Game\src\OpenGLCode\OpenGLRenderer.cpp(42,52): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\jayli\Desktop\repos\jay_liang_S23\Game\src\OpenGLCode\OpenGLRenderer.cpp(43,18): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+C:\Users\jayli\Desktop\repos\jay_liang_S23\Game\src\OpenGLCode\OpenGLRenderer.cpp(43,18): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\jayli\Desktop\repos\jay_liang_S23\Game\src\OpenGLCode\OpenGLRenderer.cpp(43,44): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+C:\Users\jayli\Desktop\repos\jay_liang_S23\Game\src\OpenGLCode\OpenGLRenderer.cpp(43,44): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+  OpenGLShader.cpp
+  Renderer.cpp
+C:\Users\jayli\Desktop\repos\jay_liang_S23\Game\src\Image.h(19,19): error C2065: 'ImplImage': undeclared identifier
+C:\Users\jayli\Desktop\repos\jay_liang_S23\Game\src\Image.h(19,8): error C2923: 'std::unique_ptr': 'ImplImage' is not a valid template type argument for parameter '_Ty'
+C:\Users\jayli\Desktop\repos\jay_liang_S23\Game\src\Image.h(19,19): message : see declaration of 'ImplImage'
+C:\Users\jayli\Desktop\repos\jay_liang_S23\Game\src\Image.h(19,8): error C2976: 'std::unique_ptr': too few template arguments
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\memory(3139,1): message : see declaration of 'std::unique_ptr'
+C:\Users\jayli\Desktop\repos\jay_liang_S23\Game\src\Image.h(19,30): error C3000: 'std::unique_ptr': use of class template requires template argument list. Argument deduction is not allowed in non-static data member
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\memory(3139,1): message : see declaration of 'std::unique_ptr'
+C:\Users\jayli\Desktop\repos\jay_liang_S23\Game\src\Image.h(19,30): warning C4251: 'Game::Image::mImplementation': class 'std::unique_ptr' needs to have dll-interface to be used by clients of class 'Game::Image'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\memory(3139,1): message : see declaration of 'std::unique_ptr'
+C:\Users\jayli\Desktop\repos\jay_liang_S23\Game\src\Shader.h(18,31): warning C4251: 'Game::Shader::mImplementation': class 'std::unique_ptr<Game::ImplShader,std::default_delete<Game::ImplShader>>' needs to have dll-interface to be used by clients of class 'Game::Shader'
+C:\Users\jayli\Desktop\repos\jay_liang_S23\Game\src\Shader.h(18,8): message : see declaration of 'std::unique_ptr<Game::ImplShader,std::default_delete<Game::ImplShader>>'
+C:\Users\jayli\Desktop\repos\jay_liang_S23\Game\src\ImplRenderer.h(10,4): error C2653: 'Renderer': is not a class or namespace name
+C:\Users\jayli\Desktop\repos\jay_liang_S23\Game\src\ImplRenderer.h(10,14): error C2061: syntax error: identifier 'TextureBox'
+C:\Users\jayli\Desktop\repos\jay_liang_S23\Game\src\Renderer.h(40,33): warning C4251: 'Game::Renderer::mImplementation': class 'std::unique_ptr<Game::ImplRenderer,std::default_delete<Game::ImplRenderer>>' needs to have dll-interface to be used by clients of class 'Game::Renderer'
+C:\Users\jayli\Desktop\repos\jay_liang_S23\Game\src\Renderer.h(40,8): message : see declaration of 'std::unique_ptr<Game::ImplRenderer,std::default_delete<Game::ImplRenderer>>'
+C:\Users\jayli\Desktop\repos\jay_liang_S23\Game\src\GameWindow.h(27,45): warning C4251: 'Game::GameWindow::mInstance': class 'std::unique_ptr<Game::GameWindow,std::default_delete<Game::GameWindow>>' needs to have dll-interface to be used by clients of class 'Game::GameWindow'
+C:\Users\jayli\Desktop\repos\jay_liang_S23\Game\src\GameWindow.h(13,15): message : see declaration of 'std::unique_ptr<Game::GameWindow,std::default_delete<Game::GameWindow>>'
+C:\Users\jayli\Desktop\repos\jay_liang_S23\Game\src\OpenGLCode\OpenGLRenderer.h(11,16): error C3668: 'Game::OpenGLRenderer::Draw': method with override specifier 'override' did not override any base class methods
+C:\Users\jayli\Desktop\repos\jay_liang_S23\Game\src\Renderer.cpp(11,69): error C2259: 'Game::OpenGLRenderer': cannot instantiate abstract class
+C:\Users\jayli\Desktop\repos\jay_liang_S23\Game\src\OpenGLCode\OpenGLRenderer.h(6,8): message : see declaration of 'Game::OpenGLRenderer'
+C:\Users\jayli\Desktop\repos\jay_liang_S23\Game\src\Renderer.cpp(11,69): message : due to following members:
+C:\Users\jayli\Desktop\repos\jay_liang_S23\Game\src\Renderer.cpp(11,69): message : 'void Game::ImplRenderer::Draw(Game::Image &)': is abstract
+C:\Users\jayli\Desktop\repos\jay_liang_S23\Game\src\ImplRenderer.h(9,16): message : see declaration of 'Game::ImplRenderer::Draw'
+C:\Users\jayli\Desktop\repos\jay_liang_S23\Game\src\Renderer.cpp(11,50): error C2259: 'Game::OpenGLRenderer': cannot instantiate abstract class
+C:\Users\jayli\Desktop\repos\jay_liang_S23\Game\src\OpenGLCode\OpenGLRenderer.h(6,8): message : see declaration of 'Game::OpenGLRenderer'
+C:\Users\jayli\Desktop\repos\jay_liang_S23\Game\src\Renderer.cpp(11,50): message : due to following members:
+C:\Users\jayli\Desktop\repos\jay_liang_S23\Game\src\Renderer.cpp(11,50): message : 'void Game::ImplRenderer::Draw(Game::Image &)': is abstract
+C:\Users\jayli\Desktop\repos\jay_liang_S23\Game\src\ImplRenderer.h(9,16): message : see declaration of 'Game::ImplRenderer::Draw'
+C:\Users\jayli\Desktop\repos\jay_liang_S23\Game\src\Renderer.cpp(11,48): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'std::unique_ptr<Game::ImplShader,std::default_delete<Game::ImplShader>>'
+C:\Users\jayli\Desktop\repos\jay_liang_S23\Game\src\Renderer.cpp(11,48): message : No constructor could take the source type, or constructor overload resolution was ambiguous
+C:\Users\jayli\Desktop\repos\jay_liang_S23\Game\src\Renderer.cpp(18,18): error C2660: 'Game::ImplRenderer::Draw': function does not take 4 arguments
+C:\Users\jayli\Desktop\repos\jay_liang_S23\Game\src\ImplRenderer.h(9,16): message : see declaration of 'Game::ImplRenderer::Draw'
+C:\Users\jayli\Desktop\repos\jay_liang_S23\Game\src\Renderer.cpp(18,18): message : while trying to match the argument list '(Game::Image, initializer list, Game::Shader, Game::Renderer::ScreenCoord)'
+C:\Users\jayli\Desktop\repos\jay_liang_S23\Game\src\Renderer.cpp(25,95): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\jayli\Desktop\repos\jay_liang_S23\Game\src\Renderer.cpp(25,70): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\jayli\Desktop\repos\jay_liang_S23\Game\src\Renderer.cpp(26,18): error C2660: 'Game::ImplRenderer::Draw': function does not take 4 arguments
+C:\Users\jayli\Desktop\repos\jay_liang_S23\Game\src\ImplRenderer.h(9,16): message : see declaration of 'Game::ImplRenderer::Draw'
+C:\Users\jayli\Desktop\repos\jay_liang_S23\Game\src\Renderer.cpp(26,18): message : while trying to match the argument list '(Game::Image, initializer list, Game::Shader, Game::Renderer::ScreenCoord)'
+C:\Users\jayli\Desktop\repos\jay_liang_S23\Game\src\Renderer.cpp(33,18): error C2660: 'Game::ImplRenderer::Draw': function does not take 4 arguments
+C:\Users\jayli\Desktop\repos\jay_liang_S23\Game\src\ImplRenderer.h(9,16): message : see declaration of 'Game::ImplRenderer::Draw'
+C:\Users\jayli\Desktop\repos\jay_liang_S23\Game\src\Renderer.cpp(33,18): message : while trying to match the argument list '(Game::Image, Game::Renderer::TextureBox, Game::Shader, Game::Renderer::ScreenCoord)'
+C:\Users\jayli\Desktop\repos\jay_liang_S23\Game\src\Renderer.cpp(37,95): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\jayli\Desktop\repos\jay_liang_S23\Game\src\Renderer.cpp(37,70): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\jayli\Desktop\repos\jay_liang_S23\Game\src\Renderer.cpp(38,18): error C2660: 'Game::ImplRenderer::Draw': function does not take 4 arguments
+C:\Users\jayli\Desktop\repos\jay_liang_S23\Game\src\ImplRenderer.h(9,16): message : see declaration of 'Game::ImplRenderer::Draw'
+C:\Users\jayli\Desktop\repos\jay_liang_S23\Game\src\Renderer.cpp(38,18): message : while trying to match the argument list '(Game::Image, Game::Renderer::TextureBox, Game::Shader, Game::Renderer::ScreenCoord)'
+  Shader.cpp
+C:\Users\jayli\Desktop\repos\jay_liang_S23\Game\src\Shader.h(18,31): warning C4251: 'Game::Shader::mImplementation': class 'std::unique_ptr<Game::ImplShader,std::default_delete<Game::ImplShader>>' needs to have dll-interface to be used by clients of class 'Game::Shader'
+C:\Users\jayli\Desktop\repos\jay_liang_S23\Game\src\Shader.h(18,8): message : see declaration of 'std::unique_ptr<Game::ImplShader,std::default_delete<Game::ImplShader>>'
+  WindowImplementation.cpp
+  Generating Code...
