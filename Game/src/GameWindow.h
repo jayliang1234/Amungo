@@ -2,7 +2,7 @@
 #include "pch.h"
 #include "GameUtil.h"
 #include "WindowImplementation.h"
-
+#include "GameEvents.h"
 namespace Game
 {
 
@@ -22,6 +22,9 @@ namespace Game
 		static int GetHeight();
 
 		~GameWindow();
+
+		void SetKeyPressedCallback(std::function<void(const KeyPressed&)>);
+		void SetKeyReleasedCallback(std::function<void(const KeyReleased&)>);
 	private:
 		GameWindow();
 		inline static std::unique_ptr<GameWindow> mInstance{ nullptr };

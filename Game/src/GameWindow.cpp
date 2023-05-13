@@ -22,7 +22,7 @@ namespace Game
 
 	void GameWindow::CreateWindow(int width, int height, std::string&& windowName)
 	{
-		mInstance->mImplementation->CreateWindow(width, height, windowName);
+		mInstance->mImplementation->CreateWindow(width, height, std::move(windowName));
 	}
 
 	void GameWindow::SwapBuffers()
@@ -49,6 +49,16 @@ namespace Game
 	{
 		if (mImplementation != nullptr)
 			delete mImplementation;
+	}
+
+	void GameWindow::SetKeyPressedCallback(std::function<void(const KeyPressed&)>callbackFunc)
+	{
+		mImplementation->SetKeyPressedCallback(callbackFunc);
+	}
+
+	void GameWindow::SetKeyReleasedCallback(std::function<void(const KeyReleased&)>callbackFunc)
+	{
+		mImplementation->SetKeyReleasedCallback(callbackFunc);
 	}
 
 	GameWindow::GameWindow()

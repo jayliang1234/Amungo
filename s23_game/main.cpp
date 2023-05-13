@@ -13,9 +13,7 @@ class S23_Game_App : public Game::GameApp
 
 	virtual void OnUpdate() override
 	{
-		std::cout << "Game is running" << std::endl;
-		Game::GameWindow::SwapBuffers();
-		Game::GameWindow::PollEvents();
+		
 	}
 
 };
