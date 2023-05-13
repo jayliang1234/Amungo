@@ -4,13 +4,11 @@
 #include "GLFW/glfw3.h"
 
 namespace Game {
-
-
 	OpenGLRenderer::OpenGLRenderer()
 	{
 		if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
 		{
-			GAME_ERROR("Failed to initialize GLAD");
+			std::cout << "Failed to initialize GLAD" << std::endl;
 			return;
 		}
 		glEnable(GL_BLEND);
@@ -58,4 +56,5 @@ namespace Game {
 		glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT);
 	}
+
 }

@@ -1,6 +1,9 @@
 #pragma once
-#include "Renderer.h"
 #include "RendererTypes.h"
+#include "Image.h"
+#include "Shader.h"
+
+
 namespace Game
 {
 	class ImplRenderer

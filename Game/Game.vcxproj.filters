@@ -42,6 +42,7 @@
     <ClCompile Include="src\OpenGLCode\OpenGLRenderer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+<<<<<<< HEAD
     <ClCompile Include="src\Image.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -51,6 +52,8 @@
     <ClCompile Include="src\OpenGLCode\OpenGLImage.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+=======
+>>>>>>> 128ef12e779b01eb341b5422353d6308941c420a
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\Game.h">
@@ -98,6 +101,7 @@
     <ClInclude Include="src\OpenGLCode\OpenGLRenderer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+<<<<<<< HEAD
     <ClInclude Include="src\RendererTypes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -107,5 +111,7 @@
     <ClInclude Include="src\OpenGLCode\OpenGLImage.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+=======
+>>>>>>> 128ef12e779b01eb341b5422353d6308941c420a
   </ItemGroup>
 </Project>

@@ -15,6 +15,7 @@ namespace Game
 
 		virtual void Clear() override;
 
+
 	private:
 		unsigned int mVBO, mVAO, mEBO;
 

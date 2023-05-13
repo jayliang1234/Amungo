@@ -33,11 +33,11 @@ namespace Game
 				Callbacks* callbacks{ (Callbacks*)glfwGetWindowUserPointer(window) };
 
 				KeyPressed e{ keycode };
-				
+
 				callbacks->keyPressedFunc(e);
 			}
-				
-		})
+
+			});
 	}
 
 	void GLFWimplementation::SwapBuffers()

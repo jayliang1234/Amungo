@@ -1,10 +1,11 @@
 #pragma once
 #include "pch.h"
-#include"GameUtil.h"
+#include "GameUtil.h"
 #include "Image.h"
 #include "Shader.h"
 #include "ImplRenderer.h"
 #include "RendererTypes.h"
+
 namespace Game
 {
 	class GAME_API Renderer
@@ -23,7 +24,6 @@ namespace Game
 
 	private:
 		std::unique_ptr<ImplRenderer> mImplementation{ nullptr };
-
 		Shader mDefaultShader;
 
 	};

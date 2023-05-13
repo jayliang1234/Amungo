@@ -2,13 +2,13 @@ x64/
 .vs/
 Debug/
 Release/
-Game/Debug
-Game/Release
-Game/x64
-s23_game/Debug
-s23_game/Release
-s23_game/x64
+Game/Debug/
+Game/Release/
+Game/x64/
+s23_game/Debug/
+s23_game/Release/
+s23_game/x64/
 glfw_build/
-glad/x64
-stbi/x64
+glad/x64/
+stbi/x64/
 

@@ -7,8 +7,8 @@ namespace Game
 	class GAME_API Image
 	{
 	public:
-		Image(const std::string& imageFile);
-		Image(std::string&& imageFile);
+		Image(const std::string& imgFile);
+		Image(std::string&& imgFile);
 
 		void Activate();
 

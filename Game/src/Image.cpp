@@ -6,15 +6,15 @@ namespace Game
 	Image::Image(const std::string& imgFile) 
 	{
 #ifdef GAME_OPENGL
-		std::unique_ptr<ImplImage>{ new OpenGLImage(imgFile)};
+		mImplementation = std::unique_ptr<ImplImage>{ new OpenGLImage(imgFile)};
 #else 
 		#Only_OpenGL_is_implemented_at_the_moment
 #endif
 	}
-	Image::Image(std::string&& imageFile)
+	Image::Image(std::string&& imgFile)
 	{
 #ifdef GAME_OPENGL
-		std::unique_ptr<ImplImage>{ new OpenGLImage(imgFile)};
+		mImplementation = std::unique_ptr<ImplImage>{ new OpenGLImage(imgFile)};
 #else 
 		#Only_OpenGL_is_implemented_at_the_moment
 #endif
