@@ -8,14 +8,14 @@ namespace Game {
 	{
 		if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
 		{
-			std::cout << "Failed to initialize GLAD" << std::endl;
+			std::cerr << "Failed to initialize GLAD" << std::endl;
 			return;
 		}
 		glEnable(GL_BLEND);
 		glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 		int edata[] = {
-				0, 1, 3,
-				1, 2, 3
+			0, 1, 3,
+			1, 2, 3
 		};
 
 		glGenVertexArrays(1, &mVAO);
@@ -51,7 +51,7 @@ namespace Game {
 		glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
 	}
 
-	void Game::OpenGLRenderer::Clear()
+	void OpenGLRenderer::Clear()
 	{
 		glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT);

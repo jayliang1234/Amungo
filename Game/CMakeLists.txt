@@ -21,10 +21,10 @@ set(SOURCE_FILES
 	src/GameApp.cpp
 	src/GameWindow.cpp
 	src/GLFWcode/GLFWimplementation.cpp
-	src/Shader.cpp
-	src/OpenGLCode/OpenGLShader.cpp
 	src/Renderer.cpp
 	src/OpenGLCode/OpenGLRenderer.cpp
+	src/Shader.cpp
+	src/OpenGLCode/OpenGLShader.cpp
 	src/Image.cpp
 	src/OpenGLCode/OpenGLImage.cpp
 )
@@ -43,4 +43,4 @@ add_definitions(-DGAME_LIB)
 add_definitions(-DGAME_GLFW)
 add_definitions(-DGAME_OPENGL)
 add_definitions(-DGAME_WINDOWS)
-add_definitions(-DFLOOR_DEBUG=2)
+add_definitions(-DGAME_DEBUG=2)

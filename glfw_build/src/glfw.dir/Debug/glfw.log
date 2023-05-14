@@ -1,3 +1,27 @@
-﻿  LINK : C:\Users\jayli\Desktop\repos\jay_liang_S23\x64\Debug\glfw3.dll not found or not built by the last incremental link; performing full link
+﻿  1>Building Custom Rule C:/Users/jayli/Desktop/repos/mygame/glfw/src/CMakeLists.txt
+  context.c
+  init.c
+  input.c
+  monitor.c
+  platform.c
+  vulkan.c
+  window.c
+  egl_context.c
+  osmesa_context.c
+  null_init.c
+  null_monitor.c
+  null_window.c
+  null_joystick.c
+  win32_module.c
+  win32_time.c
+  win32_thread.c
+  win32_init.c
+  win32_joystick.c
+  win32_monitor.c
+  win32_window.c
+  Generating Code...
+  Compiling...
+  wgl_context.c
+  Generating Code...
      Creating library C:/Users/jayli/Desktop/repos/mygame/glfw_build/src/Debug/glfw3dll.lib and object C:/Users/jayli/Desktop/repos/mygame/glfw_build/src/Debug/glfw3dll.exp
   glfw.vcxproj -> C:\Users\jayli\Desktop\repos\jay_liang_S23\x64\Debug\glfw3.dll

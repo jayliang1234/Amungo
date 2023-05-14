@@ -6,4 +6,5 @@
 #include "../src/Shader.h"
 #include "../src/Image.h"
 #include "../src/Renderer.h"
+#include "../src/RendererTypes.h"
 #include "../src/GameEvents.h"

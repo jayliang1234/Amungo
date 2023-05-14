@@ -18,7 +18,7 @@ namespace Game
 	void Renderer::Draw(Image& image, Shader& shader, ScreenCoord coords)
 	{
 		mImplementation->Draw(image, 
-			{0,0, image.GetWidth(), image.GetHeight()},
+			{0, 0, image.GetWidth(), image.GetHeight()},
 			shader,
 			coords);
 	}
@@ -26,7 +26,7 @@ namespace Game
 	{
 		mDefaultShader.Pass2FloatValues("screenSize:", GameWindow::GetWidth(), GameWindow::GetHeight());
 		mImplementation->Draw(image,
-			{ 0,0, image.GetWidth(), image.GetHeight() },
+			{ 0, 0, image.GetWidth(), image.GetHeight() },
 			mDefaultShader,
 			coords);
 	}

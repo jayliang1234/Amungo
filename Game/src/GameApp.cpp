@@ -8,6 +8,7 @@
 #include "Renderer.h"
 #include "Shader.h"
 #include "GameWindow.h"
+#include "Image.h"
 namespace Game
 {
 	void GameApp::Run()
