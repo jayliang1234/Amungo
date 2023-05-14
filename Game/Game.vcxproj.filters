@@ -105,4 +105,9 @@
       <UniqueIdentifier>{7dca3699-8ed2-4fbe-8c87-6b42ea0bb17b}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\Assets\Images\test.png">
+      <Filter>Resource FIles</Filter>
+    </Image>
+  </ItemGroup>
 </Project>
