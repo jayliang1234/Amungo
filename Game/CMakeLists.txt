@@ -14,6 +14,9 @@ set(HEADER_FILES
 	src/Image.h
 	src/ImplImage.h
 	src/OpenGLCode/OpenGLImage.h	
+	src/Unit.h
+	src/GameEvents.h
+	src/GameKeys.h
 	
 )
 
@@ -27,6 +30,8 @@ set(SOURCE_FILES
 	src/OpenGLCode/OpenGLShader.cpp
 	src/Image.cpp
 	src/OpenGLCode/OpenGLImage.cpp
+	src/Unit.cpp
+	src/GameEvents.cpp
 )
 add_library(Game SHARED ${HEADER_FILES} ${SOURCE_FILES})
 

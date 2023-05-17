@@ -25,6 +25,9 @@
     <ProjectReference Include="..\Game\Game.vcxproj">
       <Project>{7c35ea33-a94f-4981-af6b-e103a318fdf4}</Project>
     </ProjectReference>
+    <ProjectReference Include="..\glfw_build\src\glfw.vcxproj">
+      <Project>{b5eaf3e7-3088-35d7-bc91-a2bc7b2c26dd}</Project>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

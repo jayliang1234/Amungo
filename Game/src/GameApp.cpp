@@ -11,7 +11,15 @@
 #include "Image.h"
 namespace Game
 {
+	GameApp::GameApp()
+	{
+		GameWindow::Init();
+		GameWindow::CreateWindow(800, 600, "Test Name");
+
+		SetWindowCloseCallback([this]() {DefaultWindowCloseHandler(); });
+	}
 	void GameApp::Run()
+
 	{
 		Renderer renderer;
 
@@ -24,10 +32,9 @@ namespace Game
 
 		mNextFrameTime = std::chrono::steady_clock::now();
 
-		while (true)
+		while (!mGameWindowShouldClose)
 		{
 			renderer.Clear();
-
 			renderer.Draw(pic, { 200, 100 });
 
 			OnUpdate();
@@ -47,5 +54,13 @@ namespace Game
 	void GameApp::SetKeyReleasedCallback(std::function<void(const KeyReleased&)> callbackFunc)
 	{
 		GameWindow::GetWindow()->SetKeyReleasedCallback(callbackFunc);
+	}
+	void GameApp::SetWindowCloseCallback(std::function<void()> callbackFunc)
+	{
+		GameWindow::GetWindow()->SetWindowCloseCallback(callbackFunc);
+	}
+	void GameApp::DefaultWindowCloseHandler()
+	{
+		mGameWindowShouldClose = true;
 	}
 }

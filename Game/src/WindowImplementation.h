@@ -18,7 +18,7 @@ namespace Game
 
 		virtual void SetKeyPressedCallback(std::function<void(const KeyPressed&)> callbackFunc) = 0;
 		virtual void SetKeyReleasedCallback(std::function<void(const KeyReleased&)> callbackFunc) = 0;
-		//virtual void SetWindowCloseCallback(std::function<void()> callbackFunc) = 0;
+		virtual void SetWindowCloseCallback(std::function<void()> callbackFunc) = 0;
 
 		virtual ~WindowImplementation() {};
 

@@ -36,8 +36,20 @@ namespace Game
 
 				callbacks->keyPressedFunc(e);
 			}
+			else if (action == GLFW_RELEASE)
+			{
+				Callbacks* callbacks{ (Callbacks*)glfwGetWindowUserPointer(window) };
 
-			});
+				KeyReleased e{ keycode };
+				callbacks->keyReleasedFunc(e);
+			}
+
+		});
+
+		glfwSetWindowCloseCallback(mWindow, [](GLFWwindow* window) {
+			Callbacks* callbacks{ (Callbacks*)glfwGetWindowUserPointer(window) };
+		callbacks->windowCloseFunc();
+		});
 	}
 
 	void GLFWimplementation::SwapBuffers()
@@ -72,6 +84,10 @@ namespace Game
 	void GLFWimplementation::SetKeyReleasedCallback(std::function<void(const KeyReleased&)> callbackFunc)
 	{
 		mCallbacks.keyReleasedFunc = callbackFunc;
+	}
+
+	void GLFWimplementation::SetWindowCloseCallback(std::function<void()> callbackFunc)
+	{
 	}
 
 }

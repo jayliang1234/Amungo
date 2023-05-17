@@ -61,6 +61,10 @@ namespace Game
 		mImplementation->SetKeyReleasedCallback(callbackFunc);
 	}
 
+	void GameWindow::SetWindowCloseCallback(std::function<void()> callbackFunc)
+	{
+	}
+
 	GameWindow::GameWindow()
 	{
 #ifdef GAME_GLFW
