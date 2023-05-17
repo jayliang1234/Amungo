@@ -14,7 +14,7 @@ namespace Game
 	Shader::Shader(std::string&& vertexFile, std::string&& fragmentFile)
 	{
 #ifdef GAME_OPENGL
-		mImplementation = std::unique_ptr <ImplShader>{ new OpenGLShader{std::move(vertexFile), std::move(fragmentFile)} };
+		mImplementation = std::unique_ptr<ImplShader>{ new OpenGLShader{std::move(vertexFile), std::move(fragmentFile)} };
 #else
 		#Only_OpenGL_is_implemented_at_the_moment
 #endif

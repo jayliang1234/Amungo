@@ -3,9 +3,8 @@
 #include "GameUtil.h"
 #include "Image.h"
 #include "Shader.h"
-#include "ImplRenderer.h"
 #include "RendererTypes.h"
-
+#include "ImplRenderer.h"
 namespace Game
 {
 	class GAME_API Renderer

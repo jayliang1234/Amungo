@@ -15,11 +15,10 @@ namespace Game
 	{
 		Renderer renderer;
 
-		Image pic{ "../Assets/Images/test.png"};
+		Image pic{ "../Assets/Images/test2.png" };
 		pic.Activate();
 
-		Shader sProgram{ "../Assets/Shaders/DefaultVertexShader.glsl",
-			"../Assets/Shaders/DefaultFragmentShader.glsl" };
+		Shader sProgram{ "../Assets/Shaders/DefaultVertexShader.glsl", "../Assets/Shaders/DefaultFragmentShader.glsl" };
 
 		sProgram.Pass2FloatValues("screenSize:", GameWindow::GetWidth(), GameWindow::GetHeight());
 

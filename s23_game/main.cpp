@@ -8,7 +8,7 @@ class S23_Game_App : public Game::GameApp
 	S23_Game_App() 
 	{
 		Game::GameWindow::Init();
-		Game::GameWindow::CreateWindow(800, 600, "Test Name");
+		Game::GameWindow::CreateWindow(800, 800, "Test Name");
 	}
 
 	virtual void OnUpdate() override

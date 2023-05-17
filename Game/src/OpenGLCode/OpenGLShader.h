@@ -19,7 +19,5 @@ namespace Game
 	private:
 		unsigned int mProgram{ 0 };
 
-
-
 	};
 }

@@ -1,7 +1,7 @@
 #pragma once
 
-#include "pch.h"
 #include "../ImplImage.h"
+#include "pch.h"
 
 namespace Game
 {
@@ -11,9 +11,10 @@ namespace Game
 		OpenGLImage(const std::string& imgFile);
 		OpenGLImage(std::string&& imgFile);
 
+		virtual void Activate() override;
+
 		virtual int GetWidth() const override;
 		virtual int GetHeight() const override;
-		virtual void Activate() override;
 
 		~OpenGLImage();
 		

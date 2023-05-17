@@ -48,7 +48,7 @@ namespace Game
 		if (!success)
 		{
 			glGetShaderInfoLog(fragment, 1024, NULL, infoLog);
-			std::cout << "ERROR::SHADER_COMPILATION_ERROR of type FRAGMENT:\n" << infoLog << "\n -- --";
+			std::cout << "ERROR::SHADER_COMPILATION_ERROR of type FRAGMENT:\n" << infoLog << "\n -- --" << std::endl;
 		}
 
 		mProgram = glCreateProgram();
@@ -60,7 +60,7 @@ namespace Game
 		if (!success)
 		{
 			glGetProgramInfoLog(mProgram, 1024, NULL, infoLog);
-			std::cout << "ERROR::PROGRAM_LINKING_ERROR of type PROGRAM:\n" << infoLog << "\n -- --";
+			std::cout << "ERROR::PROGRAM_LINKING_ERROR of type PROGRAM:\n" << infoLog << "\n -- --" << std::endl;
 		}
 
 		glDeleteShader(vertex);

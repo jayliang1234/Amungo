@@ -8,7 +8,7 @@ namespace Game
 		int texWidth{ 0 };
 		int texHeight{ 0 };
 
-		TextureBox(int xOnPicture, int yOnPicture, int boxWidth, int boxHeight) :
+		TextureBox(int xOnPicture, int yOnPicture, int boxWidth, int boxHeight) : 
 			xTexCoord(xOnPicture), yTexCoord(yOnPicture), texWidth(boxWidth), texHeight(boxHeight) {};
 	};
 
