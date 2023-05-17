@@ -8,9 +8,8 @@ namespace Game
 	class GAME_API GameApp
 	{
 	public:
-		GameApp();
 		virtual void OnUpdate() = 0;
-
+		GameApp();
 		void Run();
 
 		void SetKeyPressedCallback(std::function<void(const KeyPressed&)> callbackFunc);

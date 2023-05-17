@@ -11,9 +11,6 @@ namespace Game
 		virtual void Pass2FloatValues(std::string&& name, float val1, float val2) = 0;
 
 		virtual ~ImplShader() {};
-	private:
-
-
 
 	};
 }

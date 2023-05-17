@@ -26,8 +26,8 @@ class S23_Game_App : public Game::GameApp
 	}
 private:
 	Game::Renderer renderer;
-	Game::Unit unit{ "../Assets/Images/test.png", {100,100} };
-	Game::Image back{ "../Assets/Images/back.png" };
+	Game::Unit unit{ "../Assets/Images/test1.png", {100,100} };
+	Game::Image back{ "../Assets/Images/back1.png" };
 
 };
 

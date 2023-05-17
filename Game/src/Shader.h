@@ -1,6 +1,6 @@
 #pragma once
-#include "pch.h"
 #include "GameUtil.h"
+#include "pch.h"
 #include "ImplShader.h"
 namespace Game
 {
@@ -16,9 +16,6 @@ namespace Game
 		void Pass2FloatValues(std::string&& name, float val1, float val2);
 	private:
 		std::unique_ptr<ImplShader> mImplementation;
-
-
-
 
 	};
 }

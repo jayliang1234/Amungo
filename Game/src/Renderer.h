@@ -3,8 +3,8 @@
 #include "GameUtil.h"
 #include "Image.h"
 #include "Shader.h"
-#include "RendererTypes.h"
 #include "ImplRenderer.h"
+#include "RendererTypes.h"
 #include "Unit.h"
 namespace Game
 {

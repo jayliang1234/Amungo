@@ -17,7 +17,6 @@ set(HEADER_FILES
 	src/Unit.h
 	src/GameEvents.h
 	src/GameKeys.h
-	
 )
 
 set(SOURCE_FILES

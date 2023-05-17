@@ -19,24 +19,11 @@ namespace Game
 		SetWindowCloseCallback([this]() {DefaultWindowCloseHandler(); });
 	}
 	void GameApp::Run()
-
 	{
-		Renderer renderer;
-
-		Image pic{ "../Assets/Images/test2.png" };
-		pic.Activate();
-
-		Shader sProgram{ "../Assets/Shaders/DefaultVertexShader.glsl", "../Assets/Shaders/DefaultFragmentShader.glsl" };
-
-		sProgram.Pass2FloatValues("screenSize:", GameWindow::GetWidth(), GameWindow::GetHeight());
-
 		mNextFrameTime = std::chrono::steady_clock::now();
 
 		while (!mGameWindowShouldClose)
 		{
-			renderer.Clear();
-			renderer.Draw(pic, { 200, 100 });
-
 			OnUpdate();
 
 			std::this_thread::sleep_until(mNextFrameTime);

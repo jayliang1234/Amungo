@@ -1,5 +1,6 @@
 #pragma once
-#include"ImplRenderer.h"
+#include "./ImplRenderer.h"
+#include "RendererTypes.h"
 
 namespace Game
 {

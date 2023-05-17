@@ -1,5 +1,4 @@
 #pragma once
-
 #include "GameUtil.h"
 namespace Game 
 {
@@ -8,11 +7,8 @@ namespace Game
 	public:
 		KeyPressed(int kCode);
 		int GetKeyCode() const;
-
-
 	private:
 		int mKeyCode;
-
 
 	};
 
@@ -30,9 +26,5 @@ namespace Game
 	};
 	class GAME_API WindowClosed
 	{
-	public:
-
-	private:
-
 	};
 }

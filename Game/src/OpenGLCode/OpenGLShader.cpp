@@ -29,8 +29,10 @@ namespace Game
 			glGetShaderInfoLog(vertex, 1024, NULL, infoLog);
 			std::cout << "ERROR::SHADER_COMPILATION_ERROR of type VERTEX:\n" << infoLog << "\n -- --";
 		}
+
 		std::string fShader;
 		std::ifstream i2file{ fragmentFile };
+
 		while (std::getline(i2file, line))
 		{
 			fShader += line;

@@ -6,7 +6,7 @@ namespace Game
 	Image::Image(const std::string& imgFile) 
 	{
 #ifdef GAME_OPENGL
-		mImplementation = std::unique_ptr<ImplImage>{ new OpenGLImage(imgFile)};
+		mImplementation = std::unique_ptr<ImplImage>{ new OpenGLImage{imgFile} };
 #else 
 		#Only_OpenGL_is_implemented_at_the_moment
 #endif
@@ -14,7 +14,7 @@ namespace Game
 	Image::Image(std::string&& imgFile)
 	{
 #ifdef GAME_OPENGL
-		mImplementation = std::unique_ptr<ImplImage>{ new OpenGLImage(std::move(imgFile))};
+		mImplementation = std::unique_ptr<ImplImage>{ new OpenGLImage{std::move(imgFile)} };
 #else 
 		#Only_OpenGL_is_implemented_at_the_moment
 #endif

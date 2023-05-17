@@ -5,7 +5,6 @@
 #include "GameEvents.h"
 namespace Game
 {
-
 	class GAME_API GameWindow
 	{
 	public:
