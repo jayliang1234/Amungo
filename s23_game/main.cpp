@@ -44,6 +44,7 @@ public:
 			jumpHeight -= 1.0f;  // Jump speed
 		}
 		if (unit.GetCoords().yCoord <= 30) {
+			unit.SetCoords({ unit.GetCoords().xCoord, 30 });
 			doubleJump = 0;
 		}
 		if (cactus.GetCoords().xCoord  <= -50) {
