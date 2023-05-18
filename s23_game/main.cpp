@@ -27,7 +27,7 @@ public:
 		renderer.Draw(laser);
 
 		// Update the background position
-		backgroundOffset -= 10;
+		backgroundOffset -= backgroundSpeed;
 
 		// Wrap the background when it goes off-screen
 		if (backgroundOffset <= -1000)
@@ -83,8 +83,9 @@ public:
 			cactus.UpdateXCoord(objectSpeed);
 			cactus2.UpdateXCoord(objectSpeed);
 			bird.UpdateXCoord(-15);
-			if (objectSpeed > -50 && frames%1000 == 0) {
+			if (objectSpeed > -50 && frames%100 == 0) {
 				objectSpeed--;
+				backgroundSpeed++;
 			}
 		}
 		frames++;
@@ -129,7 +130,9 @@ public:
 		cactus2.SetCoords({ 1500,30 });
 		bird.SetCoords({ 5000,150 });
 		laser.SetCoords({ 1000,1000 });
+		backgroundOffset = 0;
 		objectSpeed = -10;
+		backgroundSpeed = 10;
 		OnUpdate();
 	}
 private:
@@ -155,6 +158,7 @@ private:
 	bool keyRightHeld = false;
 	bool keyLeftHeld = false;
 	int backgroundOffset = 0;
+	int backgroundSpeed = 10;
 };
 
 GAME_START(S23_Game_App);
