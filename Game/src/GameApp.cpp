@@ -14,8 +14,7 @@ namespace Game
 	GameApp::GameApp()
 	{
 		GameWindow::Init();
-		GameWindow::CreateWindow(800, 600, "Test Name");
-
+		GameWindow::CreateWindow(800, 500, "Amrungus");
 		SetWindowCloseCallback([this]() {DefaultWindowCloseHandler(); });
 	}
 	void GameApp::Run()

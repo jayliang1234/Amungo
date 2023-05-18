@@ -19,6 +19,7 @@ namespace Game
 		void SetCoords(ScreenCoord newCoords);
 		void UpdateXCoord(int amount);
 		void UpdateYCoord(int amount);
+
 	private:
 		Image mImage;
 		ScreenCoord mPosition;
