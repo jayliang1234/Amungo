@@ -20,7 +20,7 @@ namespace Game
 	}
 	void Renderer::Draw(Image& image, ScreenCoord coords)
 	{
-		mDefaultShader.Pass2FloatValues("screenSize:", GameWindow::GetWidth(), GameWindow::GetHeight());
+		mDefaultShader.Pass2FloatValues("screenSize", GameWindow::GetWidth(), GameWindow::GetHeight());
 		mImplementation->Draw(image, { 0, 0, image.GetWidth(), image.GetHeight() }, mDefaultShader, coords);
 	}
 	void Renderer::Draw(Image& image, TextureBox texCoords, Shader& shader, ScreenCoord coords)
@@ -29,7 +29,7 @@ namespace Game
 	}
 	void Renderer::Draw(Image& image, TextureBox texCoords, ScreenCoord coords)
 	{
-		mDefaultShader.Pass2FloatValues("screenSize:", GameWindow::GetWidth(), GameWindow::GetHeight());
+		mDefaultShader.Pass2FloatValues("screenSize", GameWindow::GetWidth(), GameWindow::GetHeight());
 		mImplementation->Draw(image, texCoords, mDefaultShader, coords);
 	}
 	void Renderer::Draw(Unit& unit, Shader& shader)

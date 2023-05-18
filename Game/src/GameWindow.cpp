@@ -1,8 +1,9 @@
 #include "pch.h"
 #include "GameWindow.h"
 #include "GLFWCode/GLFWimplementation.h"
-namespace Game
-{
+
+//test2
+namespace Game {
 
 	void GameWindow::Init()
 	{
@@ -35,6 +36,8 @@ namespace Game
 		mInstance->mImplementation->PollEvents();
 	}
 
+
+
 	int GameWindow::GetWidth()
 	{
 		return mInstance->mImplementation->GetWidth();
@@ -47,8 +50,11 @@ namespace Game
 
 	GameWindow::~GameWindow()
 	{
-		if (mImplementation != nullptr)
+		if (mImplementation != nullptr) {
 			delete mImplementation;
+
+
+		}
 	}
 
 	void GameWindow::SetKeyPressedCallback(std::function<void(const KeyPressed&)>callbackFunc)
@@ -56,7 +62,7 @@ namespace Game
 		mImplementation->SetKeyPressedCallback(callbackFunc);
 	}
 
-	void GameWindow::SetKeyReleasedCallback(std::function<void(const KeyReleased&)>callbackFunc)
+	void GameWindow::SetKeyReleasedCallback(std::function<void(const KeyReleased&)> callbackFunc)
 	{
 		mImplementation->SetKeyReleasedCallback(callbackFunc);
 	}
@@ -65,13 +71,16 @@ namespace Game
 	{
 	}
 
+
 	GameWindow::GameWindow()
 	{
 #ifdef GAME_GLFW
+
 		mImplementation = new GLFWimplementation;
 #else
-		#ERROR_only_GLFW_is_supported
+		#ERROR_only_GFLW_is_supported
 #endif
 	}
+
 
 }
