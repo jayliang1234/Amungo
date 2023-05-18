@@ -9,6 +9,7 @@ public:
 	S23_Game_App()
 	{
 		SetKeyPressedCallback([this](const Game::KeyPressed& e) {MyKeyPressedFunc(e); });
+		SetKeyReleasedCallback([this](const Game::KeyReleased& e) {MyKeyReleasedFunc(e); });
 	}
 
 	virtual void OnUpdate() override
@@ -30,6 +31,14 @@ public:
 			renderer.Draw(GameOver, {0,0});
 			GameIsOver = true;
 			return;
+		}
+		if (keyRightHeld && unit.GetCoords().xCoord < width - 100 && !GameIsOver)
+		{
+			unit.UpdateXCoord(10);
+		}
+		else if (keyLeftHeld && unit.GetCoords().xCoord > 0 && !GameIsOver)
+		{
+			unit.UpdateXCoord(-10);
 		}
 		if (UnitsOverlap(laser, bird)) {
 			bird.UpdateXCoord(randomNumber3);
@@ -75,10 +84,13 @@ public:
 	void MyKeyPressedFunc(const Game::KeyPressed& e)
 	{
 		if (e.GetKeyCode() == GAME_KEY_RIGHT && unit.GetCoords().xCoord < width - 100 && !GameIsOver) {
-				unit.UpdateXCoord(20);
+			unit.UpdateXCoord(10);
+			keyRightHeld = true;
 		}
-		else if (e.GetKeyCode() == GAME_KEY_LEFT && unit.GetCoords().xCoord > 0 && !GameIsOver)
-			unit.UpdateXCoord(-20);
+		else if (e.GetKeyCode() == GAME_KEY_LEFT && unit.GetCoords().xCoord > 0 && !GameIsOver) {
+			unit.UpdateXCoord(-10);
+			keyLeftHeld = true;
+		}
 		else if (((e.GetKeyCode() == GAME_KEY_SPACE && (unit.GetCoords().yCoord <= 30 || doubleJump < 2)) ) && !GameIsOver) { //Can only jump if you're on the floor
 			jumpHeight = 15.0f;
 			doubleJump++;
@@ -88,6 +100,17 @@ public:
 		}
 		else if (e.GetKeyCode() == GAME_KEY_LEFT_CONTROL && laser.GetCoords().xCoord >= 1000){
 			laser.SetCoords({unit.GetCoords().xCoord+20,unit.GetCoords().yCoord+20 });
+		}
+	}
+	void MyKeyReleasedFunc(const Game::KeyReleased& e)
+	{
+		if (e.GetKeyCode() == GAME_KEY_RIGHT)
+		{
+			keyRightHeld = false;
+		}
+		else if (e.GetKeyCode() == GAME_KEY_LEFT)
+		{
+			keyLeftHeld = false;
 		}
 	}
 	void GameReset() {
@@ -121,6 +144,8 @@ private:
 	int frames = 0;
 	int objectSpeed = -10;
 	int doubleJump = 0;
+	bool keyRightHeld = false;
+	bool keyLeftHeld = false;
 
 };
 
