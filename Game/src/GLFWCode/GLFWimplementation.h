@@ -25,8 +25,8 @@ namespace Game
 	private:
 		struct Callbacks
 		{
-			std::function<void(const KeyPressed&)> keyPressedFunc;
-			std::function<void(const KeyReleased&)> keyReleasedFunc;
+			std::function<void(const KeyPressed&)> keyPressedFunc{ [](const KeyPressed&) {} };
+			std::function<void(const KeyReleased&)> keyReleasedFunc{ [](const KeyReleased&) {} };
 			std::function<void()> windowCloseFunc{ []() {} };
 		} mCallbacks;
 

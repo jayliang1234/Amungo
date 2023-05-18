@@ -3,11 +3,12 @@
 
 
 namespace Game {
-	Unit::Unit(const std::string& image, ScreenCoord coords) :mImage(image), mPosition(coords)
+	Unit::Unit(const std::string& image, ScreenCoord coords) :
+		mImage(image), mPosition(coords)
 	{
-
 	}
-	Unit::Unit(std::string&& image, ScreenCoord coords) :mImage(std::move(image)), mPosition(coords)
+	Unit::Unit(std::string&& image, ScreenCoord coords) :
+		mImage(std::move(image)), mPosition(coords)
 	{
 	}
 	int Unit::GetWidth() const

@@ -2,7 +2,6 @@
 #include "GameWindow.h"
 #include "GLFWCode/GLFWimplementation.h"
 
-//test2
 namespace Game {
 
 	void GameWindow::Init()
@@ -52,8 +51,6 @@ namespace Game {
 	{
 		if (mImplementation != nullptr) {
 			delete mImplementation;
-
-
 		}
 	}
 

@@ -6,6 +6,7 @@ namespace Game
 	{
 	public:
 		KeyPressed(int kCode);
+		KeyPressed() = delete;
 		int GetKeyCode() const;
 	private:
 		int mKeyCode;
@@ -16,6 +17,7 @@ namespace Game
 	{
 	public:
 		KeyReleased(int kCode);
+		KeyReleased() = delete;
 		int GetKeyCode() const;
 
 

@@ -48,7 +48,7 @@ namespace Game
 
 		glfwSetWindowCloseCallback(mWindow, [](GLFWwindow* window) {
 			Callbacks* callbacks{ (Callbacks*)glfwGetWindowUserPointer(window) };
-		callbacks->windowCloseFunc();
+			callbacks->windowCloseFunc();
 			});
 	}
 
@@ -88,10 +88,12 @@ namespace Game
 
 	void GLFWimplementation::SetWindowCloseCallback(std::function<void()> callbackFunc)
 	{
+
 	}
 
 	GLFWimplementation::~GLFWimplementation()
 	{
+		glfwTerminate();
 	}
 
 }

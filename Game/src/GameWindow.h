@@ -2,6 +2,7 @@
 #include "pch.h"
 #include "GameUtil.h"
 #include "WindowImplementation.h"
+#include "GameEvents.h"
 
 namespace Game
 {
