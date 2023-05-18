@@ -19,13 +19,21 @@ public:
 		int randomNumber2 = std::rand() % 501 + 1500;
 		int randomNumber3 = std::rand() % 2001 + 2000;
 		renderer.Clear();
-		renderer.Draw(back, { 0,0 });
+		renderer.Draw(back, { backgroundOffset, 0 });
 		renderer.Draw(unit);
 		renderer.Draw(cactus);
 		renderer.Draw(cactus2);
 		renderer.Draw(bird);
 		renderer.Draw(laser);
 
+		// Update the background position
+		backgroundOffset -= 10;
+
+		// Wrap the background when it goes off-screen
+		if (backgroundOffset <= -1000)
+		{
+			backgroundOffset = 0;
+		}
 		if (UnitsOverlap(unit, cactus) || UnitsOverlap(unit, cactus2) || UnitsOverlap(unit, bird)) //on collision
 		{
 			renderer.Draw(GameOver, {0,0});
@@ -146,7 +154,7 @@ private:
 	int doubleJump = 0;
 	bool keyRightHeld = false;
 	bool keyLeftHeld = false;
-
+	int backgroundOffset = 0;
 };
 
 GAME_START(S23_Game_App);
