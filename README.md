@@ -15,6 +15,7 @@ Created with OPENGL game engine from my game engine class :)
 6. Hold left or right key giving the user a better experience
 7. the current difficulty/level is displayed on the top and it is based off the speed of the incoming objects
 8. There are up to 10 levels
+9. The sprite i used was a character from a popular game called amoung us and the bullet that it shoots is the bullet from mario :)
 
 
 ## Controls/ ALSO displayed in game
