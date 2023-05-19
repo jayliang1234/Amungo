@@ -25,8 +25,42 @@ public:
 		renderer.Draw(cactus);
 		renderer.Draw(cactus2);
 		renderer.Draw(bird);
-		renderer.Draw(laser);
+		renderer.Draw(bullet);
 		renderer.Draw(explosion);
+
+
+		//Draws the Level Number
+		if (level == 1) {
+			renderer.Draw(one, { x , y });
+		}
+		else if (level == 2) {
+			renderer.Draw(two, { x , y });
+		}
+		else if (level == 3) {
+			renderer.Draw(three, { x , y });
+		}
+		else if (level == 4) {
+			renderer.Draw(four, { x , y });
+		}
+		else if (level == 5) {
+			renderer.Draw(five, { x , y });
+		}
+		else if (level == 6) {
+			renderer.Draw(six, { x , y });
+		}
+		else if (level == 7) {
+			renderer.Draw(seven, { x , y });
+		}
+		else if (level == 8) {
+			renderer.Draw(eight, { x , y });
+		}
+		else if (level == 9) {
+			renderer.Draw(nine, { x , y });
+		}
+		else if (level == 10) {
+			renderer.Draw(one, { x , y });
+			renderer.Draw(zero, { x + 60 , y });
+		}
 
 		// Update the background position to simulate animated background
 		backgroundOffset -= backgroundSpeed;
@@ -38,49 +72,65 @@ public:
 		{
 			backgroundOffset = 0;
 		}
-		if (UnitsOverlap(unit, cactus) || UnitsOverlap(unit, cactus2) || UnitsOverlap(unit, bird)) //on collision
+		//on unit Collision with Cactus or bird
+		if (UnitsOverlap(unit, cactus) || UnitsOverlap(unit, cactus2) || UnitsOverlap(unit, bird))
 		{
 			renderer.Draw(GameOver, {0,0});
 			GameIsOver = true;
 			return;
 		}
+		// Hold Right Key 
 		if (keyRightHeld && unit.GetCoords().xCoord < width - 100 && !GameIsOver)
 		{
 			unit.UpdateXCoord(10);
 		}
+		// Hold Left key
 		else if (keyLeftHeld && unit.GetCoords().xCoord > 0 && !GameIsOver)
 		{
 			unit.UpdateXCoord(-10);
 		}
-		if (UnitsOverlap(laser, bird)) {
+		
+		// on bullet hitting bird
+		if (UnitsOverlap(bullet, bird)) {
 			explosion.SetCoords({ bird.GetCoords().xCoord, bird.GetCoords().yCoord });
 			bird.UpdateXCoord(randomNumber3);
-			laser.SetCoords({ 1000,1000});
+			bullet.SetCoords({ 1000,1000});
 		}
+
+		// Adjust gravity speed
 		if (jumpHeight == 0.0f && unit.GetCoords().yCoord > 30) {
-			unit.UpdateYCoord(-10);  // Gravity speed
+			unit.UpdateYCoord(-10);
 		}
+
+		// Adjust the character's position based on jumpHeight
 		if (jumpHeight > 0.0f) {
-			// Adjust the character's position based on jumpHeight
 			unit.UpdateYCoord(jumpHeight); //Simulates gravity by slowly updating by height
 			jumpHeight -= 1.0f;  // Jump speed
 		}
+
+		// if unit touches the ground double jump reset
 		if (unit.GetCoords().yCoord <= 30) {
 			unit.SetCoords({ unit.GetCoords().xCoord, 30 });
 			doubleJump = 0;
 		}
+
+		// Spawns cactus in random x coord
 		if (cactus.GetCoords().xCoord  <= -50) {
 			cactus.UpdateXCoord(randomNumber);
 		}
 		if (cactus2.GetCoords().xCoord <= -50) {
 			cactus2.UpdateXCoord(randomNumber2);
 		}
-		if (laser.GetCoords().xCoord <= 1000) {
-			laser.UpdateXCoord(20);
+
+		// bullet moves right
+		if (bullet.GetCoords().xCoord <= 1000) {
+			bullet.UpdateXCoord(20);
 		}
-		else {
-			laser.SetCoords({ 1000,1000 });
+		else { //if bullet reaches end of map it disappears out of frame
+			bullet.SetCoords({ 1000,1000 });
 		}
+		
+		// If bird reaches left side it resets to a random xCoord, else cactus speed is slowly speeding up
 		if (bird.GetCoords().xCoord <= -50) {
 			bird.UpdateXCoord(randomNumber3);
 		}
@@ -88,13 +138,18 @@ public:
 			cactus.UpdateXCoord(objectSpeed);
 			cactus2.UpdateXCoord(objectSpeed);
 			bird.UpdateXCoord(-15);
+			//you can adjust how long each level lasts
 			if (objectSpeed > -50 && frames%100 == 0) {
 				objectSpeed--;
 				backgroundSpeed++;
+				if (abs(objectSpeed) % 5 == 0) {
+					level++;
+				}
 			}
 		}
 		frames++;
 	}
+
 	void MyKeyPressedFunc(const Game::KeyPressed& e)
 	{
 		if (e.GetKeyCode() == GAME_KEY_RIGHT && unit.GetCoords().xCoord < width - 100 && !GameIsOver) {
@@ -112,10 +167,11 @@ public:
 		else if (e.GetKeyCode() == GAME_KEY_ENTER && GameIsOver == true) {
 			GameReset();
 		}
-		else if (e.GetKeyCode() == GAME_KEY_LEFT_CONTROL && laser.GetCoords().xCoord >= 1000){
-			laser.SetCoords({unit.GetCoords().xCoord+20,unit.GetCoords().yCoord+20 });
+		else if (e.GetKeyCode() == GAME_KEY_LEFT_CONTROL && bullet.GetCoords().xCoord >= 1000){
+			bullet.SetCoords({unit.GetCoords().xCoord+20,unit.GetCoords().yCoord+20 });
 		}
 	}
+
 	void MyKeyReleasedFunc(const Game::KeyReleased& e)
 	{
 		if (e.GetKeyCode() == GAME_KEY_RIGHT)
@@ -127,6 +183,8 @@ public:
 			keyLeftHeld = false;
 		}
 	}
+
+	//resets game
 	void GameReset() {
 		GameIsOver = false;
 		jumpHeight = 0.0f;
@@ -134,11 +192,12 @@ public:
 		cactus.SetCoords({ 1000,30 });
 		cactus2.SetCoords({ 1500,30 });
 		bird.SetCoords({ 5000,150 });
-		laser.SetCoords({ 1000,1000 });
+		bullet.SetCoords({ 1000,1000 });
 		backgroundOffset = 0;
 		objectSpeed = -10;
 		backgroundSpeed = 10;
 		OnUpdate();
+		level = 1;
 	}
 private:
 
@@ -152,16 +211,27 @@ private:
 
 	Game::Unit unit{ "../Assets/Images/sprite.png", {100,30} };
 	Game::Unit cactus{ "../Assets/Images/cactus.png", {1000,30} };
-	Game::Unit cactus2{ "../Assets/Images/cactus.png", {1500,30} };
+	Game::Unit cactus2{ "../Assets/Images/cactus2.png", {1500,30} };
 	Game::Unit bird{ "../Assets/Images/bird.png", {5000,150} };
-	Game::Unit laser{ "../Assets/Images/laser.png", {1000,50} };
+	Game::Unit bullet{ "../Assets/Images/bullet.png", {1000,50} };
 	Game::Unit explosion{ "../Assets/Images/explosion.png", {1000,1000} };
 	Game::Image back{ "../Assets/Images/background.png" };
-	Game::Image GameOver{ "../Assets/Images/gameover2.png" };
+	Game::Image GameOver{ "../Assets/Images/gameover.png" };
 	Game::Image home{ "../Assets/Images/homescreen.png" };
 	Game::Image instructions{ "../Assets/Images/instructions.png" };
 
+	Game::Image zero{ "../Assets/Images/0.png" };
+	Game::Image one{ "../Assets/Images/1.png" };
+	Game::Image two{ "../Assets/Images/2.png" };
+	Game::Image three{ "../Assets/Images/3.png" };
+	Game::Image four{ "../Assets/Images/4.png" };
+	Game::Image five{ "../Assets/Images/5.png" };
+	Game::Image six{ "../Assets/Images/6.png" };
+	Game::Image seven{ "../Assets/Images/7.png" };
+	Game::Image eight{ "../Assets/Images/8.png" };
+	Game::Image nine{ "../Assets/Images/9.png" };
 
+	int x = 500, y = 400;
 	int frames = 0;
 	int objectSpeed = -10;
 	int doubleJump = 0;
@@ -169,6 +239,7 @@ private:
 	bool keyLeftHeld = false;
 	int backgroundOffset = 0;
 	int backgroundSpeed = 10;
+	int level = 1;
 };
 
 GAME_START(S23_Game_App);
