@@ -20,15 +20,19 @@ public:
 		int randomNumber3 = std::rand() % 2001 + 2000;
 		renderer.Clear();
 		renderer.Draw(back, { backgroundOffset, 0 });
+		renderer.Draw(instructions, { 0,429 });
 		renderer.Draw(unit);
 		renderer.Draw(cactus);
 		renderer.Draw(cactus2);
 		renderer.Draw(bird);
 		renderer.Draw(laser);
+		renderer.Draw(explosion);
 
-		// Update the background position
+		// Update the background position to simulate animated background
 		backgroundOffset -= backgroundSpeed;
 
+		// explosion moves with backgroubnd
+		explosion.UpdateXCoord(-backgroundSpeed);
 		// Wrap the background when it goes off-screen
 		if (backgroundOffset <= -1000)
 		{
@@ -49,6 +53,7 @@ public:
 			unit.UpdateXCoord(-10);
 		}
 		if (UnitsOverlap(laser, bird)) {
+			explosion.SetCoords({ bird.GetCoords().xCoord, bird.GetCoords().yCoord });
 			bird.UpdateXCoord(randomNumber3);
 			laser.SetCoords({ 1000,1000});
 		}
@@ -144,14 +149,19 @@ private:
 	Game::Renderer renderer;
 	bool HomeScreen = true;
 	bool GameIsOver = false;
+
 	Game::Unit unit{ "../Assets/Images/sprite.png", {100,30} };
 	Game::Unit cactus{ "../Assets/Images/cactus.png", {1000,30} };
 	Game::Unit cactus2{ "../Assets/Images/cactus.png", {1500,30} };
 	Game::Unit bird{ "../Assets/Images/bird.png", {5000,150} };
 	Game::Unit laser{ "../Assets/Images/laser.png", {1000,50} };
+	Game::Unit explosion{ "../Assets/Images/explosion.png", {1000,1000} };
 	Game::Image back{ "../Assets/Images/background.png" };
 	Game::Image GameOver{ "../Assets/Images/gameover2.png" };
 	Game::Image home{ "../Assets/Images/homescreen.png" };
+	Game::Image instructions{ "../Assets/Images/instructions.png" };
+
+
 	int frames = 0;
 	int objectSpeed = -10;
 	int doubleJump = 0;
