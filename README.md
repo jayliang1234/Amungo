@@ -12,6 +12,8 @@ Created with OPENGL game engine from my game engine class :)
 3. The Speed of the objects move faster as time goes on
 4. Explosion effect after hitting a target
 5. If your character collides with any object, Press Enter to restart
+6. the current difficulty/level is displayed on the top and it is based off the speed of the incoming objects
+
 
 ## Controls/ ALSO displayed in game
 1. <- left
