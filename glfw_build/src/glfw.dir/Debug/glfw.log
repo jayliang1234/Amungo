@@ -1,1 +1,3 @@
-﻿  glfw.vcxproj -> C:\Users\jayli\Desktop\jay_liang_S23\x64\Debug\glfw3.dll
+﻿  LINK : C:\Users\jayli\Desktop\jay_liang_S23\x64\Debug\glfw3.dll not found or not built by the last incremental link; performing full link
+     Creating library C:/Users/jayli/Desktop/repos/mygame/glfw_build/src/Debug/glfw3dll.lib and object C:/Users/jayli/Desktop/repos/mygame/glfw_build/src/Debug/glfw3dll.exp
+  glfw.vcxproj -> C:\Users\jayli\Desktop\jay_liang_S23\x64\Debug\glfw3.dll

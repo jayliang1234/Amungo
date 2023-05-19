@@ -4,7 +4,7 @@ set(HEADER_FILES
 	src/GameWindow.h
 	src/WindowImplementation.h
 	src/GLFWcode/GLFWimplementation.h
-	src/Renderer.hs
+	src/Renderer.h
 	src/ImplRenderer.h
 	src/OpenGLCode/OpenGLRenderer.h
 	src/RendererTypes.h
