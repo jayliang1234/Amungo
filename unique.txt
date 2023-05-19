@@ -1,4 +1,4 @@
-This game is inspired by DinoRun
+This game was inspired by DinoRun
 
 Rules to the game:
 1. Do not collide with objects (the cactuses and the birds).
