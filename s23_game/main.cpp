@@ -27,9 +27,8 @@ public:
 		renderer.Draw(bird);
 		renderer.Draw(bullet);
 		renderer.Draw(explosion);
-
-
-		//Draws the Level Number
+		 
+		// displays the Level Number
 		if (level == 1) {
 			renderer.Draw(one, { x , y });
 		}
@@ -62,6 +61,26 @@ public:
 			renderer.Draw(zero, { x + 60 , y });
 		}
 
+		//displays lives
+		if (lives == 3) {
+			renderer.Draw(heart, { 800, 500 });
+			renderer.Draw(heart, { 840, 500 });
+			renderer.Draw(heart, { 880, 500 });
+
+		}
+		else if (lives == 2) {
+			renderer.Draw(heart, { 800, 500 });
+			renderer.Draw(heart, { 840, 500 });
+			renderer.Draw(emptyheart, { 880, 500 });
+
+		}
+		else if (lives == 1) {
+			renderer.Draw(heart, { 800, 500 });
+			renderer.Draw(emptyheart, { 840, 500 });
+			renderer.Draw(emptyheart, { 880, 500 });
+		}
+
+
 		// Update the background position to simulate animated background
 		backgroundOffset -= backgroundSpeed;
 
@@ -72,12 +91,24 @@ public:
 		{
 			backgroundOffset = 0;
 		}
+		if ((invincibletimer < CollisionX) && invincibletimer != 0) {
+			//std:: cout << invincibletimer << std::endl;
+			invincibletimer++;
+		}
+		else {
+			invincible = false;
+			invincibletimer = 0;
+		}
 		//on unit Collision with Cactus or bird
-		if (UnitsOverlap(unit, cactus) || UnitsOverlap(unit, cactus2) || UnitsOverlap(unit, bird))
+		if ((UnitsOverlap(unit, cactus) || UnitsOverlap(unit, cactus2) || UnitsOverlap(unit, bird) ) && invincible == false)
 		{
-			renderer.Draw(GameOver, {0,0});
-			GameIsOver = true;
-			return;
+			if (lives == 0) {
+				renderer.Draw(GameOver, { 0,0 });
+				GameIsOver = true;
+				return;
+			}
+			else
+				handleLifeLoss();
 		}
 		// Hold Right Key 
 		if (keyRightHeld && unit.GetCoords().xCoord < width - 100 && !GameIsOver)
@@ -149,7 +180,15 @@ public:
 		}
 		frames++;
 	}
-
+	void handleLifeLoss() {
+		lives--;
+		std::cout << lives << std::endl;
+		if (lives != 0) {
+			invincible = true;
+			CollisionX = frames + 20;
+			invincibletimer = frames;
+		}
+	}
 	void MyKeyPressedFunc(const Game::KeyPressed& e)
 	{
 		if (e.GetKeyCode() == GAME_KEY_RIGHT && unit.GetCoords().xCoord < width - 100 && !GameIsOver) {
@@ -198,6 +237,7 @@ public:
 		backgroundSpeed = 10;
 		OnUpdate();
 		level = 1;
+		lives = 3;
 	}
 private:
 
@@ -208,7 +248,7 @@ private:
 	Game::Renderer renderer;
 	bool HomeScreen = true;
 	bool GameIsOver = false;
-
+	bool invincible = false;
 	Game::Unit unit{ "../Assets/Images/sprite.png", {100,30} };
 	Game::Unit cactus{ "../Assets/Images/cactus.png", {1000,30} };
 	Game::Unit cactus2{ "../Assets/Images/cactus2.png", {1500,30} };
@@ -231,6 +271,12 @@ private:
 	Game::Image eight{ "../Assets/Images/8.png" };
 	Game::Image nine{ "../Assets/Images/9.png" };
 
+	Game::Image emptyheart{ "../Assets/Images/emptyheart.png" };
+	Game::Image heart{ "../Assets/Images/heart.png" };
+
+	int CollisionX;
+	int invincibletimer;
+
 	int x = 500, y = 400;
 	int frames = 0;
 	int objectSpeed = -10;
@@ -240,6 +286,7 @@ private:
 	int backgroundOffset = 0;
 	int backgroundSpeed = 10;
 	int level = 1;
+	int lives = 3;
 };
 
 GAME_START(S23_Game_App);
