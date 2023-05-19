@@ -1,5 +1,7 @@
 ### This game was inspired by DinoRun
 
+## Created with OPENGL game engine from my game engine class :)
+
 ## Rules to the game:
 1. Do not collide with objects (the cactuses and the birds).
 2. You can only shoot the birds
