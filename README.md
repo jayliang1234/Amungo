@@ -6,6 +6,9 @@ Created with OPENGL game engine from my game engine class :)
 1. Do not collide with objects (the cactuses and the birds).
 2. You can only shoot the birds
 
+## Objective of game:
+1. Reach level 10, the level is show in the middle of the screen! good luck
+
 ## Unique features that i added
 1. Double Jump
 2. Shoot
@@ -24,6 +27,7 @@ Created with OPENGL game engine from my game engine class :)
 1. <- left
 2. -> right
 3. spacebar - Jump
-3. spacebar twice - Double Jump
-4. Left Ctrl - Shoot
-5. Enter - Restarts game
+4. downArrow - down
+5. spacebar twice - Double Jump
+6. Left Ctrl - Shoot
+7. Enter - Restarts game
