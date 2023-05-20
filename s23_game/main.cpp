@@ -20,13 +20,14 @@ public:
 		int randomNumber3 = std::rand() % 2001 + 2000;
 		renderer.Clear();
 		renderer.Draw(back, { backgroundOffset, 0 });
-		renderer.Draw(instructions, { 0,429 });
+		renderer.Draw(instructions, { 0,450 });
 		renderer.Draw(unit);
 		renderer.Draw(cactus);
 		renderer.Draw(cactus2);
 		renderer.Draw(bird);
 		renderer.Draw(bullet);
 		renderer.Draw(explosion);
+		renderer.Draw(damage);
 		 
 		// displays the Level Number
 		if (level == 1) {
@@ -63,34 +64,37 @@ public:
 
 		//displays lives
 		if (lives == 3) {
-			renderer.Draw(heart, { 800, 500 });
-			renderer.Draw(heart, { 840, 500 });
-			renderer.Draw(heart, { 880, 500 });
+			renderer.Draw(heart, { 800, 530 });
+			renderer.Draw(heart, { 840, 530 });
+			renderer.Draw(heart, { 880, 530 });
 
 		}
 		else if (lives == 2) {
-			renderer.Draw(heart, { 800, 500 });
-			renderer.Draw(heart, { 840, 500 });
-			renderer.Draw(emptyheart, { 880, 500 });
+			renderer.Draw(heart, { 800, 530 });
+			renderer.Draw(heart, { 840, 530 });
+			renderer.Draw(emptyheart, { 880, 530 });
 
 		}
 		else if (lives == 1) {
-			renderer.Draw(heart, { 800, 500 });
-			renderer.Draw(emptyheart, { 840, 500 });
-			renderer.Draw(emptyheart, { 880, 500 });
+			renderer.Draw(heart, { 800, 530 });
+			renderer.Draw(emptyheart, { 840, 530 });
+			renderer.Draw(emptyheart, { 880, 530 });
 		}
 
 
 		// Update the background position to simulate animated background
 		backgroundOffset -= backgroundSpeed;
 
-		// explosion moves with backgroubnd
+		// explosion moves with background
 		explosion.UpdateXCoord(-backgroundSpeed);
+		damage.UpdateXCoord(-backgroundSpeed);
 		// Wrap the background when it goes off-screen
 		if (backgroundOffset <= -1000)
 		{
 			backgroundOffset = 0;
 		}
+
+		// invincible buffer after losing a life
 		if ((invincibletimer < CollisionX) && invincibletimer != 0) {
 			//std:: cout << invincibletimer << std::endl;
 			invincibletimer++;
@@ -102,6 +106,7 @@ public:
 		//on unit Collision with Cactus or bird
 		if ((UnitsOverlap(unit, cactus) || UnitsOverlap(unit, cactus2) || UnitsOverlap(unit, bird) ) && invincible == false)
 		{
+			damage.SetCoords({ unit.GetCoords().xCoord, unit.GetCoords().yCoord });
 			if (lives == 0) {
 				renderer.Draw(GameOver, { 0,0 });
 				GameIsOver = true;
@@ -168,7 +173,7 @@ public:
 		else {
 			cactus.UpdateXCoord(objectSpeed);
 			cactus2.UpdateXCoord(objectSpeed);
-			bird.UpdateXCoord(-15);
+			bird.UpdateXCoord(-20);
 			//you can adjust how long each level lasts
 			if (objectSpeed > -50 && frames%100 == 0) {
 				objectSpeed--;
@@ -232,6 +237,8 @@ public:
 		cactus2.SetCoords({ 1500,30 });
 		bird.SetCoords({ 5000,150 });
 		bullet.SetCoords({ 1000,1000 });
+		explosion.SetCoords({ 1000,1000 });
+		damage.SetCoords({ 1000,1000 });
 		backgroundOffset = 0;
 		objectSpeed = -10;
 		backgroundSpeed = 10;
@@ -255,6 +262,7 @@ private:
 	Game::Unit bird{ "../Assets/Images/bird.png", {5000,150} };
 	Game::Unit bullet{ "../Assets/Images/bullet.png", {1000,50} };
 	Game::Unit explosion{ "../Assets/Images/explosion.png", {1000,1000} };
+	Game::Unit damage{ "../Assets/Images/damage.png", {1000,1000} };
 	Game::Image back{ "../Assets/Images/background.png" };
 	Game::Image GameOver{ "../Assets/Images/gameover.png" };
 	Game::Image home{ "../Assets/Images/homescreen.png" };
