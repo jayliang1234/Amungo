@@ -14,6 +14,7 @@ Unique features that i added
 7. The current difficulty/level is displayed on the top and it is based off the speed of the incoming objects
 8. There are up to 10 levels
 9. Each game the user has 3 lives // I had to add an invincibility timer using frames
+10. Damage effect when player collides with object
 
 Controls/ ALSO displayed in game
 1. <- left
