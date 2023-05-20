@@ -80,7 +80,12 @@ public:
 			renderer.Draw(emptyheart, { 840, 530 });
 			renderer.Draw(emptyheart, { 880, 530 });
 		}
-
+		
+		if (lives == 0) {
+			renderer.Draw(GameOver, { 0,0 });
+			GameIsOver = true;
+			return;
+		}
 
 		// Update the background position to simulate animated background
 		backgroundOffset -= backgroundSpeed;
@@ -103,6 +108,7 @@ public:
 			invincible = false;
 			invincibletimer = 0;
 		}
+		//std::cout << lives << " " << GameIsOver << std::endl;
 		//on unit Collision with Cactus or bird
 		if ((UnitsOverlap(unit, cactus) || UnitsOverlap(unit, cactus2) || UnitsOverlap(unit, bird) ) && invincible == false)
 		{
@@ -230,6 +236,8 @@ public:
 
 	//resets game
 	void GameReset() {
+		level = 1;
+		lives = 3;
 		GameIsOver = false;
 		jumpHeight = 0.0f;
 		unit.SetCoords({ 100,30 });
@@ -242,9 +250,9 @@ public:
 		backgroundOffset = 0;
 		objectSpeed = -10;
 		backgroundSpeed = 10;
+
+
 		OnUpdate();
-		level = 1;
-		lives = 3;
 	}
 private:
 
@@ -282,8 +290,8 @@ private:
 	Game::Image emptyheart{ "../Assets/Images/emptyheart.png" };
 	Game::Image heart{ "../Assets/Images/heart.png" };
 
-	int CollisionX;
-	int invincibletimer;
+	int CollisionX =0;
+	int invincibletimer =0;
 
 	int x = 500, y = 400;
 	int frames = 0;
