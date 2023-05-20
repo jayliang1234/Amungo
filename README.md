@@ -17,6 +17,7 @@ Created with OPENGL game engine from my game engine class :)
 8. There are up to 10 levels
 9. The sprite i used was a character from a popular game called amoung us and the bullet that it shoots is the bullet from mario :)
 10. Each game the user has three lives
+11. Damage Effects after player collides with objects
 
 
 ## Controls/ ALSO displayed in game
