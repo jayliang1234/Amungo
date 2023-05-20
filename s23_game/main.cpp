@@ -20,7 +20,7 @@ public:
 		int randomNumber3 = std::rand() % 2001 + 2000;
 		renderer.Clear();
 		renderer.Draw(back, { backgroundOffset, 0 });
-		renderer.Draw(instructions, { 0,450 });
+		renderer.Draw(instructions, { 0,475 });
 		renderer.Draw(unit);
 		renderer.Draw(cactus);
 		renderer.Draw(cactus2);
@@ -131,6 +131,11 @@ public:
 		{
 			unit.UpdateXCoord(-10);
 		}
+		// Hold Down key
+		else if (keyDownHeld && unit.GetCoords().yCoord > 30 && !GameIsOver && jumpHeight == 0.0f)
+		{
+			unit.UpdateYCoord(-20);
+		}
 		
 		// on bullet hitting bird
 		if (UnitsOverlap(bullet, bird)) {
@@ -146,7 +151,7 @@ public:
 
 		// Adjust the character's position based on jumpHeight
 		if (jumpHeight > 0.0f) {
-			unit.UpdateYCoord(jumpHeight); //Simulates gravity by slowly updating by height
+			unit.UpdateYCoord(jumpHeight); //Simulates gravity by slowing down the jump velocity
 			jumpHeight -= 1.0f;  // Jump speed
 		}
 
@@ -181,10 +186,10 @@ public:
 			cactus2.UpdateXCoord(objectSpeed);
 			bird.UpdateXCoord(-20);
 			//you can adjust how long each level lasts
-			if (objectSpeed > -50 && frames%100 == 0) {
+			if (objectSpeed > -30 && frames%200 == 0) {
 				objectSpeed--;
 				backgroundSpeed++;
-				if (abs(objectSpeed) % 5 == 0) {
+				if (abs(objectSpeed) % 3 == 0) {
 					level++;
 				}
 			}
@@ -210,6 +215,10 @@ public:
 			unit.UpdateXCoord(-10);
 			keyLeftHeld = true;
 		}
+		else if (e.GetKeyCode() == GAME_KEY_DOWN && unit.GetCoords().yCoord > 30 && !GameIsOver) {
+			unit.UpdateYCoord(-10);
+			keyDownHeld = true;
+		}
 		else if (((e.GetKeyCode() == GAME_KEY_SPACE && (unit.GetCoords().yCoord <= 30 || doubleJump < 2)) ) && !GameIsOver) { //Can only jump if you're on the floor
 			jumpHeight = 15.0f;
 			doubleJump++;
@@ -231,6 +240,10 @@ public:
 		else if (e.GetKeyCode() == GAME_KEY_LEFT)
 		{
 			keyLeftHeld = false;
+		}
+		else if (e.GetKeyCode() == GAME_KEY_DOWN)
+		{
+			keyDownHeld = false;
 		}
 	}
 
@@ -299,6 +312,7 @@ private:
 	int doubleJump = 0;
 	bool keyRightHeld = false;
 	bool keyLeftHeld = false;
+	bool keyDownHeld = false;
 	int backgroundOffset = 0;
 	int backgroundSpeed = 10;
 	int level = 1;
