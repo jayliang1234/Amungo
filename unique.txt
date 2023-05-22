@@ -18,6 +18,7 @@ Unique features that i added
 7. The current difficulty/level is displayed on the top and it is based off the speed of the incoming objects
 8. Each game the user has 3 lives // I had to add an invincibility timer using frames
 9. Damage effect when player collides with object
+10. Added Textures from different games such as Amoung Us/RuneScape/Mario/DinoRun
 
 Controls/ ALSO displayed in game
 1. <- left
