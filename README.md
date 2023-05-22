@@ -26,8 +26,7 @@ Created with OPENGL game engine from my game engine class :)
 ## Controls/ ALSO displayed in game
 1. <- left
 2. -> right
-3. spacebar - Jump
-4. downArrow - down
-5. spacebar twice - Double Jump
+3. downArrow - down
+4. spacebar - Jump/DoubleJump
 6. Left Ctrl - Shoot
 7. Enter - Restarts game
