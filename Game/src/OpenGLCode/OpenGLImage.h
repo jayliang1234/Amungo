@@ -19,8 +19,8 @@ namespace Game
 		~OpenGLImage();
 
 	private:
-		unsigned int mImage{ 0 };
-		int mWidth{ 0 };
-		int mHeight{ 0 };
+		unsigned int texture1{ 0 };
+		int Width{ 0 };
+		int Height{ 0 };
 	};
 }
