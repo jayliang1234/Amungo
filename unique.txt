@@ -3,6 +3,7 @@ This game was inspired by DinoRun
 Rules to the game:
 1. Do not collide with objects (the cactuses and the birds).
 2. You can only shoot the birds
+3. There are up to 10 levels
 
 Objective of game:
 1. Reach level 10, the level is show in the middle of the screen! good luck
@@ -15,15 +16,14 @@ Unique features that i added
 5. If your character collides with any object, Press Enter to restart
 6. Hold left or right key giving the user a better experience
 7. The current difficulty/level is displayed on the top and it is based off the speed of the incoming objects
-8. There are up to 10 levels
-9. Each game the user has 3 lives // I had to add an invincibility timer using frames
-10. Damage effect when player collides with object
+8. Each game the user has 3 lives // I had to add an invincibility timer using frames
+9. Damage effect when player collides with object
+10. Added Textures from different games such as Amoung Us/RuneScape/Mario/DinoRun
 
 Controls/ ALSO displayed in game
 1. <- left
 2. -> right
 3. downArrow - down
-3. spacebar - Jump
-3. spacebar twice - Double Jump
-4. Left Ctrl - Shoot
-5. Enter - Restarts game
+4. spacebar - Jump/Double Jump
+5. Left Ctrl - Shoot
+6. Enter - Restarts game
