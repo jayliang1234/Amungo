@@ -35,8 +35,6 @@ namespace Game {
 		mInstance->mImplementation->PollEvents();
 	}
 
-
-
 	int GameWindow::GetWidth()
 	{
 		return mInstance->mImplementation->GetWidth();
@@ -66,6 +64,7 @@ namespace Game {
 
 	void GameWindow::SetWindowCloseCallback(std::function<void()> callbackFunc)
 	{
+		mImplementation->SetWindowCloseCallback(callbackFunc);
 	}
 
 
